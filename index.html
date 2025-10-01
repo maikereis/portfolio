@@ -9,15 +9,17 @@
     <title>Portfólio | Maike Reis</title>
     <style>
         :root {
-            --primary-color: #47626D;
-            --primary-light: #5f7d8a;
-            --primary-dark: #354a53;
-            --text-color: #2d2e32;
-            --text-light: #666;
+            --primary-color: #059669;
+            --primary-light: #10b981;
+            --primary-dark: #047857;
+            --accent-color: #f59e0b;
+            --accent-light: #fbbf24;
+            --text-color: #1e293b;
+            --text-light: #64748b;
             --secondary-color: #fff;
             --bg-color: #fff;
-            --section-bg: #47626D;
-            --bg-white-color: #f5f5f5;
+            --section-bg: linear-gradient(135deg, #059669 0%, #047857 100%);
+            --bg-white-color: #f8fafc;
             --transition: all 0.3s ease;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -47,22 +49,21 @@
         }
 
         .container2 {
-            background-color: var(--bg-white-color);
+            background: linear-gradient(135deg, #f8fafc 0%, #d1fae5 100%);
             position: relative;
             overflow: hidden;
         }
 
-        /* Decorative elements */
         .container2::before {
             content: '';
             position: absolute;
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
             background: var(--primary-color);
-            opacity: 0.1;
+            opacity: 0.05;
             border-radius: 50%;
-            top: -100px;
-            left: -100px;
+            top: -150px;
+            right: -150px;
         }
 
         nav {
@@ -83,15 +84,13 @@
 
         .logo {
             font-size: 1.5rem;
-            font-weight: 500;
-            color: rgba(0, 0, 0, 0.4);
-            /* Ajuste o valor do alpha para controlar a transparência */
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-decoration: none;
             transition: var(--transition);
-        }
-
-        .logo:hover {
-            color: var(--primary-light);
         }
 
         .nav-links {
@@ -115,7 +114,7 @@
             height: 2px;
             bottom: -4px;
             left: 0;
-            background-color: var(--primary-color);
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
             transition: var(--transition);
         }
 
@@ -124,7 +123,7 @@
         }
 
         .hero {
-            min-height: 60vh;
+            min-height: 40vh;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -138,7 +137,10 @@
 
         .hero h1 {
             font-size: 4rem;
-            color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 20px;
             line-height: 1.2;
             animation: fadeInUp 1s ease;
@@ -165,49 +167,52 @@
             height: 400px;
             border-radius: 20px;
             object-fit: cover;
-            box-shadow: var(--shadow);
+            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.2);
             transition: var(--transition);
+            border: 3px solid var(--primary-light);
         }
 
         .hero-image img:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 30px 60px rgba(5, 150, 105, 0.3);
         }
 
         .button {
             display: inline-block;
             padding: 14px 28px;
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
             text-decoration: none;
             border-radius: 8px;
             margin-right: 15px;
-            border: 2px solid var(--primary-color);
+            border: 2px solid transparent;
             font-weight: 500;
             cursor: pointer;
             transition: var(--transition);
         }
 
         .button:hover {
-            background-color: var(--primary-light);
-            border-color: var(--primary-light);
             transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(5, 150, 105, 0.3);
         }
 
         .button.secondary {
-            background-color: transparent;
-            border: 1px solid var(--primary-color);
+            background: transparent;
+            border: 2px solid var(--primary-color);
             color: var(--primary-color);
         }
 
         .button.secondary:hover {
-            background-color: var(--primary-color);
+            background: var(--primary-color);
             color: white;
         }
 
         .section-title {
             font-size: 2.5rem;
-            color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 30px;
             position: relative;
             display: inline-block;
@@ -220,7 +225,7 @@
             height: 4px;
             bottom: -10px;
             left: 0;
-            background-color: var(--primary-color);
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
             border-radius: 2px;
         }
 
@@ -248,12 +253,29 @@
             border-radius: 16px;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(5, 150, 105, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+            transition: var(--transition);
+        }
+
+        .service-card:hover::before {
+            height: 100%;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 24px rgba(5, 150, 105, 0.15);
         }
 
         .service-card h3 {
@@ -274,22 +296,27 @@
 
         .projects {
             padding: 100px 0;
-            background-color: var(--section-bg);
+            background: var(--section-bg);
             color: white;
         }
 
         .projects .section-title {
             color: white;
+            background: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .projects .section-title::after {
-            background-color: white;
+            background: white;
         }
 
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            align-items: stretch;
         }
 
         .project-card {
@@ -298,19 +325,16 @@
             color: var(--text-color);
             transition: var(--transition);
             box-shadow: var(--shadow);
-            /* Adicione estas propriedades para permitir posicionamento relativo */
             position: relative;
             display: flex;
             flex-direction: column;
-            /* Altura mínima para garantir espaço consistente */
             min-height: 250px;
-            /* Ajuste o padding para acomodar os botões */
             padding: 30px 30px 90px 30px;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
         .project-card h3 {
@@ -325,69 +349,16 @@
         }
 
         .project-links {
-            /* Posicionamento absoluto em relação ao card */
             position: absolute;
             bottom: 30px;
             left: 0;
             right: 0;
-            /* Centralização horizontal */
             display: flex;
             justify-content: center;
             gap: 15px;
             padding: 0 30px;
         }
 
-        /* Ajuste para o grid manter altura consistente */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            /* Alinhar os cards na mesma altura */
-            align-items: stretch;
-        }
-
-        .contact {
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .contact p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            color: var(--text-light);
-            font-size: 1.1rem;
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        footer {
-            padding: 30px 0;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-light);
-            background-color: var(--bg-white-color);
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 16px;
-            color: var(--text-color);
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            min-height: 300px;
-            padding: 30px 30px 90px 30px;
-        }
-
-        /* Estilos específicos para flip cards */
         .flip-card {
             background-color: transparent;
             perspective: 1000px;
@@ -420,7 +391,7 @@
 
         .flip-card-back {
             transform: rotateY(180deg);
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
         }
 
@@ -458,25 +429,122 @@
             color: var(--primary-color);
         }
 
-        /* Ajuste para os links do projeto */
-        .project-links {
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 0 30px;
+        /* Blog Posts Section */
+        .blog-posts {
+            padding: 100px 0;
+            background-color: var(--bg-white-color);
         }
 
-        /* Animations */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(5, 150, 105, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(5, 150, 105, 0.15);
+        }
+
+        .blog-card-header {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-card-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .blog-card-content {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .blog-card .blog-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .blog-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .blog-card .button {
+            align-self: flex-start;
+            margin: 0;
+        }
+
+        .contact {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .contact p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            background-color: var(--bg-white-color);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -487,13 +555,11 @@
             from {
                 opacity: 0;
             }
-
             to {
                 opacity: 1;
             }
         }
 
-        /* Mobile menu */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -505,7 +571,7 @@
         .menu-toggle span {
             width: 25px;
             height: 2px;
-            background-color: var(--primary-color);
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
             transition: var(--transition);
         }
 
@@ -566,11 +632,10 @@
             .button {
                 padding: 12px 24px;
             }
-        }
 
-        /* Smooth scroll polyfill */
-        .smooth-scroll {
-            scroll-behavior: smooth;
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -588,6 +653,7 @@
                 <a href="#about">Sobre mim</a>
                 <a href="#what-i-do">O que faço</a>
                 <a href="#projects">Projetos</a>
+                <a href="#blog">Blog</a>
                 <a href="#contact">Contato</a>
             </div>
         </div>
@@ -641,7 +707,6 @@
         <section id="where-i-work">
             <h2 class="section-title">Onde eu trabalhei</h2>
             <div class="services">
-
                 <div class="service-card">
                     <h3>Equatorial Energia</h3>
                     <p>
@@ -766,6 +831,44 @@
         </div>
     </section>
 
+    <section class="blog-posts" id="blog">
+        <div class="container">
+            <h2 class="section-title">Artigos e Reflexões</h2>
+            <p style="color: var(--text-light); font-size: 1.1rem; max-width: 800px;">
+                Compartilho insights sobre Machine Learning, Engenharia de Software e tecnologia no meu Substack.
+            </p>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-card-header"></div>
+                    <div class="blog-card-content">
+                        <h3>Explorando Conceitos de ML</h3>
+                        <p class="blog-meta">Machine Learning • Teoria</p>
+                        <p>Artigos técnicos sobre fundamentos e aplicações práticas de Machine Learning, desde conceitos básicos até arquiteturas avançadas.</p>
+                        <a href="https://substack.com/@maikerar" class="button secondary">Ler Artigos</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-header"></div>
+                    <div class="blog-card-content">
+                        <h3>Arquitetura & Engenharia</h3>
+                        <p class="blog-meta">Software Engineering • Best Practices</p>
+                        <p>Discussões sobre design de sistemas, arquitetura de software e boas práticas de engenharia aplicadas a projetos de ML.</p>
+                        <a href="https://substack.com/@maikerar" class="button secondary">Explorar</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-header"></div>
+                    <div class="blog-card-content">
+                        <h3>Insights & Aprendizados</h3>
+                        <p class="blog-meta">Reflexões • Carreira</p>
+                        <p>Reflexões sobre desenvolvimento de carreira em tech, aprendizados e experiências no mercado de tecnologia.</p>
+                        <a href="https://substack.com/@maikerar" class="button secondary">Acessar Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Contato</h2>
@@ -843,8 +946,8 @@
             });
         });
 
+        // Flip card functionality
         document.addEventListener('DOMContentLoaded', function () {
-            // Adiciona listeners para todos os botões de flip
             const flipButtons = document.querySelectorAll('.flip-button');
 
             flipButtons.forEach(button => {
