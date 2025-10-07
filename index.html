@@ -470,6 +470,41 @@
             color: var(--accent);
         }
         
+        .article-card {
+            position: relative;
+            padding-bottom: 5rem;
+        }
+        
+        .article-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+        
+        .article-meta {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-link {
+            position: absolute;
+            bottom: 2rem;
+            left: 3rem;
+            right: 3rem;
+            text-align: center;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+        }
+        
         .contact-node svg {
             color: var(--accent);
             stroke: var(--accent);
@@ -746,6 +781,60 @@
     </section>
 
     <section id="projects" class="matrix-section">
+        <h2 class="section-title">KNOWLEDGE_BASE</h2>
+        
+        <div class="hologram-grid">
+            <div class="holo-card article-card">
+                <span class="article-tag">Data Engineering</span>
+                <h3>Como tornar buscas de endereços rápidas e precisas</h3>
+                <p>Implementação de índices invertidos e algoritmos de ligação de dois estágios para busca eficiente de endereços com dados ruidosos e não estruturados.</p>
+                <div class="article-meta">
+                    <span>Substack • 2024</span>
+                </div>
+                <a href="https://maikerar.substack.com/p/como-tornar-buscas-de-enderecos-rapidas" class="btn-holo article-link">LER_ARTIGO</a>
+            </div>
+            
+            <div class="holo-card article-card">
+                <span class="article-tag">Software Architecture</span>
+                <h3>Modelagem de Domínio na Distribuição de Energia Elétrica</h3>
+                <p>Aplicação de Domain-Driven Design (DDD) para modelar sistemas complexos no setor energético. Context mapping, bounded contexts e linguagem ubíqua.</p>
+                <div class="article-meta">
+                    <span>Substack • 2024</span>
+                </div>
+                <a href="https://maikerar.substack.com/p/modelagem-de-dominio-na-distribuicao" class="btn-holo article-link">LER_ARTIGO</a>
+            </div>
+            
+            <div class="holo-card article-card">
+                <span class="article-tag">Software Engineering</span>
+                <h3>Waterfall Revisitado: Da Origem de Royce ao Desenvolvimento Moderno</h3>
+                <p>Análise histórica do modelo Waterfall original de W. W. Royce (1970) versus a interpretação moderna. Desmistificando conceitos sobre desenvolvimento sequencial.</p>
+                <div class="article-meta">
+                    <span>Medium • 2024</span>
+                </div>
+                <a href="https://medium.com/@maike_rar/waterfall-revisitado-da-origem-de-royce-ao-desenvolvimento-moderno-de-software-66c5ecc80f72" class="btn-holo article-link">LER_ARTIGO</a>
+            </div>
+            
+            <div class="holo-card article-card">
+                <span class="article-tag">Agile Methodologies</span>
+                <h3>Ágil: Filosofia, Valores e Princípios</h3>
+                <p>Explorando a essência do desenvolvimento ágil além de práticas. Do Manifesto Ágil aos riscos da fetichização de metodologias.</p>
+                <div class="article-meta">
+                    <span>Medium • 2024</span>
+                </div>
+                <a href="https://medium.com/@maike_rar/%C3%A1gil-397f15996bd9" class="btn-holo article-link">LER_ARTIGO</a>
+            </div>
+            
+            <div class="holo-card article-card">
+                <span class="article-tag">Process Framework</span>
+                <h3>RUP: Rational Unified Process</h3>
+                <p>Framework iterativo e incremental da IBM. Arquitetura em duas dimensões: fases temporais e disciplinas técnicas. Desenvolvimento orientado a riscos.</p>
+                <div class="article-meta">
+                    <span>Medium • 2024</span>
+                </div>
+                <a href="https://medium.com/@maike_rar/rup-c6a3cbac4ca7" class="btn-holo article-link">LER_ARTIGO</a>
+            </div>
+        </div>
+    </section>
         <h2 class="section-title">PROJECT_CATALOG</h2>
         
         <div class="hex-grid">
@@ -791,17 +880,6 @@
                 <div class="tech-tag">NLP</div>
             </div>
             
-            <div class="hex-project">
-                <h3>GPT from Scratch</h3>
-                <p>Complete ChatGPT 2 implementation exploring Transformer architecture from first principles</p>
-                <div class="tech-tag">Deep Learning</div>
-            </div>
-            
-            <div class="hex-project">
-                <h3>nanoGPT</h3>
-                <p>Minimalist GPT implementation demonstrating core principles in clean, educational code</p>
-                <div class="tech-tag">Research</div>
-            </div>
         </div>
     </section>
 
